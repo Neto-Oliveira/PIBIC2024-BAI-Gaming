@@ -1,0 +1,323 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar{
+  background-color: rgb(51, 51, 51);
+  padding: 15px 20px;
+  border-radius: 30px; 
+  min-width: 50px;
+  max-width: auto;
+}
+
+.navbar ul{
+  list-style: none;
+  min-width: 25px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar a{
+  min-height: 50%;
+  text-decoration: none;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+}
+
+.navbar a:hover {
+  color: #0077ff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+body{
+  background-color: #f3f3f3;
+  color: rgb(51, 51,51);
+  padding: 30px;
+  padding-top: 90px;
+  line-height: 1.6;
+}
+
+h1{
+  text-align: center;
+  color: rgb(51,51,51);
+  margin-bottom: 10px; 
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #0066cc;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+h2 { /*forma moderna de fazer aquele hr feio que eu fazia*/
+  color: rgb(51, 51, 51);
+  margin: 25px 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #0077ff;
+}
+
+p{
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  flex: 1 1 200px; 
+  min-width: 200px; 
+  max-width: 320px; 
+  min-height: 350px;
+  max-height: 950px;
+  background: #99ccff;
+  overflow: hidden;
+  box-shadow: 0px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 350px; 
+  overflow: hidden;
+  
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 140%;
+  object-fit: cover; 
+  transition: transform 0.5s ease;
+}
+
+.image-gallery p {
+  padding: 20px;
+  line-height: 1.6;
+  
+  font-size: 1rem;
+  text-align: justify;
+  margin: 0;
+  flex-grow: 1; 
+}
+
+.image-caption {
+  padding: 15px;  font-size: 1.4rem !important; 
+  text-align: center;
+  font-weight: bold; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1); 
+}
+
+.image-item:hover .image-placeholder img {
+  transform: scale(1.05);
+}
+
+h3 {
+  color: #0066cc;
+  margin: 20px 0 10px;
+}
+
+h4 {
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+hr {
+  margin: 25px 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+.autores {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.autores p {
+  margin-bottom: 5px;
+}
+
+.tabela-container {
+  margin: 30px 0;
+  overflow-x: auto;
+}
+
+.tabela-container h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tfoot td {
+  font-style: italic;
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+.referencias {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.referencias li {
+  margin-bottom: 10px;
+  text-align: justify;
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+@media (max-width: 1024px) {
+  .image-gallery {
+    gap: 20px;
+  }
+  
+  .image-item {
+    flex: 1 1 250px;
+  }
+  
+  .image-placeholder {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  body {
+    padding: 15px;
+    padding-top: 100px;
+  }
+  
+  table {
+    font-size: 0.8rem;
+  }
+  
+  th, td {
+    padding: 8px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-caption {
+    font-size: 1.2rem !important;
+    min-height: 45px;
+  }
+  
+  .image-gallery p {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+  
+  .image-placeholder {
+    height: 250px;
+  }
+  
+  .image-item {
+    margin: 0 10px;
+  }
+  
+  .navbar {
+    padding: 10px 12px;
+    border-radius: 15px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .navbar ul {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .navbar a {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+footer p {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: rgba(51, 51, 51, 0.9);
+  font-size: 0.9rem;
+}
