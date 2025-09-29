@@ -84,7 +84,7 @@ document.querySelectorAll('.chart-container').forEach(chart => {
   chartObserver.observe(chart);
 });
 
-document.querySelectorAll('a[href$=relatorio".pdf"]').forEach(link => {
+document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
   link.addEventListener('click', function() {
 
     const originalText = this.innerHTML;
